@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.TestRunner" time="651.324" tests="15" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="webdriver.chrome.driver" value="/Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/target/test-classes:/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/target/classes:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-java/4.25.0/selenium-java-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-api/4.25.0/selenium-api-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.25.0/selenium-chrome-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.25.0/selenium-chromium-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-json/4.25.0/selenium-json-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.25.0/selenium-manager-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.25.0/selenium-devtools-v127-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v128/4.25.0/selenium-devtools-v128-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v129/4.25.0/selenium-devtools-v129-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.25.0/selenium-devtools-v85-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.25.0/selenium-edge-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.25.0/selenium-firefox-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-http/4.25.0/selenium-http-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.25.0/selenium-ie-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.25.0/selenium-remote-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/guava/33.3.0-jre/guava-33.3.0-jre.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/ranajitchowdhury/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/ranajitchowdhury/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/errorprone/error_prone_annotations/2.28.0/error_prone_annotations-2.28.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-api/1.42.1/opentelemetry-api-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-context/1.42.1/opentelemetry-context-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.42.1/opentelemetry-exporter-logging-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.42.1/opentelemetry-sdk-common-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.42.1/opentelemetry-sdk-extension-autoconfigure-spi-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.42.1/opentelemetry-sdk-extension-autoconfigure-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.42.1-alpha/opentelemetry-api-incubator-1.42.1-alpha.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.42.1/opentelemetry-sdk-trace-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.42.1/opentelemetry-sdk-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.42.1/opentelemetry-sdk-metrics-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.42.1/opentelemetry-sdk-logs-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-os/4.25.0/selenium-os-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.25.0/selenium-safari-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-support/4.25.0/selenium-support-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-core/7.15.0/cucumber-core-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin/7.15.0/cucumber-gherkin-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.15.0/cucumber-gherkin-messages-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/datatable/7.15.0/datatable-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-plugin/7.15.0/cucumber-plugin-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/docstring/7.15.0/docstring-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-testng/7.15.0/cucumber-testng-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/github/bonigarcia/webdrivermanager/5.7.0/webdrivermanager-5.7.0.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/ranajitchowdhury/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java/3.3.5/docker-java-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-core/3.3.5/docker-java-core-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-api/3.3.5/docker-java-api-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/ranajitchowdhury/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/ranajitchowdhury/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/ranajitchowdhury/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/ranajitchowdhury/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/ranajitchowdhury/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.5/docker-java-transport-httpclient5-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-transport/3.3.5/docker-java-transport-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/ranajitchowdhury/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/Users/ranajitchowdhury/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/ranajitchowdhury/.m2/repository/org/testng/testng/7.9.0/testng-7.9.0.jar:/Users/ranajitchowdhury/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/ranajitchowdhury/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/slf4j-simple/2.0.12/slf4j-simple-2.0.12.jar:/Users/ranajitchowdhury/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/ranajitchowdhury/.m2/repository/net/bytebuddy/byte-buddy/1.14.11/byte-buddy-1.14.11.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Users/ranajitchowdhury/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_21.0.7.v20250502-0916/jre/lib"/>
+    <property name="sun.java.command" value="/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/target/surefire/surefirebooter-20260429204231705_3.jar /Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/target/surefire 2026-04-29T20-42-31_573-jvmRun1 surefire-20260429204231705_1tmp surefire_0-20260429204231705_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/target/test-classes:/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/target/classes:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-java/4.25.0/selenium-java-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-api/4.25.0/selenium-api-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.25.0/selenium-chrome-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.25.0/selenium-chromium-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-json/4.25.0/selenium-json-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.25.0/selenium-manager-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.25.0/selenium-devtools-v127-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v128/4.25.0/selenium-devtools-v128-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v129/4.25.0/selenium-devtools-v129-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.25.0/selenium-devtools-v85-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.25.0/selenium-edge-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.25.0/selenium-firefox-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-http/4.25.0/selenium-http-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.25.0/selenium-ie-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.25.0/selenium-remote-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/guava/33.3.0-jre/guava-33.3.0-jre.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/ranajitchowdhury/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/ranajitchowdhury/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/errorprone/error_prone_annotations/2.28.0/error_prone_annotations-2.28.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-api/1.42.1/opentelemetry-api-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-context/1.42.1/opentelemetry-context-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.42.1/opentelemetry-exporter-logging-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.42.1/opentelemetry-sdk-common-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.42.1/opentelemetry-sdk-extension-autoconfigure-spi-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.42.1/opentelemetry-sdk-extension-autoconfigure-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.42.1-alpha/opentelemetry-api-incubator-1.42.1-alpha.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.42.1/opentelemetry-sdk-trace-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.42.1/opentelemetry-sdk-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.42.1/opentelemetry-sdk-metrics-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.42.1/opentelemetry-sdk-logs-1.42.1.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-os/4.25.0/selenium-os-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.25.0/selenium-safari-driver-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-support/4.25.0/selenium-support-4.25.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-core/7.15.0/cucumber-core-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin/7.15.0/cucumber-gherkin-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.15.0/cucumber-gherkin-messages-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/datatable/7.15.0/datatable-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-plugin/7.15.0/cucumber-plugin-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/docstring/7.15.0/docstring-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-testng/7.15.0/cucumber-testng-7.15.0.jar:/Users/ranajitchowdhury/.m2/repository/io/github/bonigarcia/webdrivermanager/5.7.0/webdrivermanager-5.7.0.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/ranajitchowdhury/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java/3.3.5/docker-java-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-core/3.3.5/docker-java-core-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-api/3.3.5/docker-java-api-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/ranajitchowdhury/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/ranajitchowdhury/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/ranajitchowdhury/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/ranajitchowdhury/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/ranajitchowdhury/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.5/docker-java-transport-httpclient5-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/com/github/docker-java/docker-java-transport/3.3.5/docker-java-transport-3.3.5.jar:/Users/ranajitchowdhury/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/ranajitchowdhury/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/Users/ranajitchowdhury/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/ranajitchowdhury/.m2/repository/org/testng/testng/7.9.0/testng-7.9.0.jar:/Users/ranajitchowdhury/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/ranajitchowdhury/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/slf4j-simple/2.0.12/slf4j-simple-2.0.12.jar:/Users/ranajitchowdhury/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/ranajitchowdhury/.m2/repository/net/bytebuddy/byte-buddy/1.14.11/byte-buddy-1.14.11.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/ranajitchowdhury"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/Users/ranajitchowdhury/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_21.0.7.v20250502-0916/jre"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/target/surefire/surefirebooter-20260429204231705_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="21.0.7+6-LTS"/>
+    <property name="user.name" value="ranajitchowdhury"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="otel.metrics.exporter" value="none"/>
+    <property name="os.version" value="26.4.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="otel.traces.exporter" value="none"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.7+6"/>
+    <property name="localRepository" value="/Users/ranajitchowdhury/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="otel.logs.exporter" value="none"/>
+    <property name="java.io.tmpdir" value="/var/folders/53/wqhwmn8n7l7fgbk_1c70l0jw0000gn/T/"/>
+    <property name="java.version" value="21.0.7"/>
+    <property name="user.dir" value="/Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/ranajitchowdhury/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.7+6-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;Add product to cart&quot;, &quot;Cart Functionality&quot;](1)" classname="runners.TestRunner" time="60.243">
+    <failure message="❌ Product was not found in the cart after adding expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: ❌ Product was not found in the cart after adding expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.CartSteps.product_should_appear_in_cart(CartSteps.java:29)
+	at ✽.Product should appear in cart(file:///Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/src/test/resources/features/CartCheckout.feature:10)
+]]></failure>
+    <system-out><![CDATA[
+@smoke @regression
+Scenario: Add product to cart         # src/test/resources/features/CartCheckout.feature:7
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application # stepdefinitions.CommonSteps.user_launches_the_application()
+  When User adds products to cart     # stepdefinitions.CartSteps.user_adds_products_to_cart()
+  Then Product should appear in cart  # stepdefinitions.CartSteps.product_should_appear_in_cart()
+      java.lang.AssertionError: ❌ Product was not found in the cart after adding expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.CartSteps.product_should_appear_in_cart(CartSteps.java:29)
+	at ✽.Product should appear in cart(file:///Users/ranajitchowdhury/eclipse-workspace/QaBrainsSauceLabAPI_Automation/src/test/resources/features/CartCheckout.feature:10)
+
+]]></system-out>
+    <system-err><![CDATA[Apr 29, 2026 8:42:33 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:42:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:42:55 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Remove product from cart&quot;, &quot;Cart Functionality&quot;](2)" classname="runners.TestRunner" time="55.49">
+    <system-out><![CDATA[
+@smoke @regression
+Scenario: Remove product from cart    # src/test/resources/features/CartCheckout.feature:13
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application # stepdefinitions.CommonSteps.user_launches_the_application()
+  When User adds products to cart     # stepdefinitions.CartSteps.user_adds_products_to_cart()
+  And User removes product from cart  # stepdefinitions.CartSteps.user_removes_product_from_cart()
+  Then Cart should be empty           # stepdefinitions.CartSteps.cart_should_be_empty()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:43:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:43:49 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Registered user can reset password&quot;, &quot;Forgot Password functionality&quot;](3)" classname="runners.TestRunner" time="53.616">
+    <system-out><![CDATA[
+@smoke @regression @ForgotPassword
+Scenario: Registered user can reset password                            # src/test/resources/features/ForgotPassword.feature:4
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+  Given User is on Forgot Password page                                 # stepdefinitions.ForgotPasswordSteps.userIsOnForgotPasswordPage()
+  When User enters registered email "chyranajit@gmail.com"              # stepdefinitions.ForgotPasswordSteps.userEntersRegisteredEmail(java.lang.String)
+  And User clicks on Submit button                                      # stepdefinitions.ForgotPasswordSteps.userClicksOnSubmitButton()
+  Then User should see success message "Password is reset successfully" # stepdefinitions.ForgotPasswordSteps.userShouldSeeSuccessMessage(java.lang.String)
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:44:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:44:43 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Unregistered user cannot reset password&quot;, &quot;Forgot Password functionality&quot;](4)" classname="runners.TestRunner" time="85.161">
+    <system-out><![CDATA[
+@regression @ForgotPassword
+Scenario: Unregistered user cannot reset password                                                                              # src/test/resources/features/ForgotPassword.feature:11
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+  Given User is on Forgot Password page                                                                                        # stepdefinitions.ForgotPasswordSteps.userIsOnForgotPasswordPage()
+  When User enters unregistered email "chyranajitgmail.com"                                                                    # stepdefinitions.ForgotPasswordSteps.userEntersUnregisteredEmail(java.lang.String)
+  And User clicks on Submit button                                                                                             # stepdefinitions.ForgotPasswordSteps.userClicksOnSubmitButton()
+✅ HTML5 ERROR: 'Please include an '@' in the email address. 'chyranajitgmail.com' is missing an '@'.'
+  Then User should see error message "Please include an '@' sign in the email address.'chyranajitgmail.com' is missing an'@'." # stepdefinitions.ForgotPasswordSteps.userShouldSeeErrorMessage(java.lang.String)
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:45:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:45:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login with valid credentials&quot;, &quot;Login Functionality&quot;](5)" classname="runners.TestRunner" time="47.84">
+    <system-out><![CDATA[
+@smoke @regression @Login
+Scenario: Login with valid credentials         # src/test/resources/features/Login.feature:7
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application          # stepdefinitions.CommonSteps.user_launches_the_application()
+  When User enters valid username and password # stepdefinitions.LoginSteps.user_enters_valid_username_and_password()
+✅ Success Message: Congratulations. You have successfully logged in. When you are done click logout below.
+✅ Login Success Status: true
+  Then User should be logged in successfully   # stepdefinitions.LoginSteps.user_should_be_logged_in_successfully()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:47:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:47:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login with invalid credentials&quot;, &quot;Login Functionality&quot;](6)" classname="runners.TestRunner" time="46.348">
+    <system-out><![CDATA[
+@regression @Login
+Scenario: Login with invalid credentials         # src/test/resources/features/Login.feature:13
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application            # stepdefinitions.CommonSteps.user_launches_the_application()
+  When User enters invalid username and password # stepdefinitions.LoginSteps.user_enters_invalid_username_and_password()
+🔴 Error Message: Your email and password both are invalid!
+🔴 Error Display Status: true
+  Then Error message should be displayed         # stepdefinitions.LoginSteps.error_message_should_be_displayed()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:47:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:47:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Logged in user should be able to logout&quot;, &quot;Logout Functionality&quot;](7)" classname="runners.TestRunner" time="52.316">
+    <system-out><![CDATA[
+@smoke @regression @Logout
+Scenario: Logged in user should be able to logout # src/test/resources/features/Logout.feature:4
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application             # stepdefinitions.CommonSteps.user_launches_the_application()
+✅ Success Message: Congratulations. You have successfully logged in. When you are done click logout below.
+  And User is logged in                           # stepdefinitions.LogoutSteps.user_is_logged_in()
+  When User clicks on logout button               # stepdefinitions.LogoutSteps.user_clicks_on_logout_button()
+  Then User should be logged out successfully     # stepdefinitions.LogoutSteps.user_should_be_logged_out_successfully()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:48:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:48:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User should be able to register successfully with a valid email&quot;, &quot;User Registration&quot;](8)" classname="runners.TestRunner" time="52.723">
+    <system-out><![CDATA[
+@smoke @regression @Registration
+Scenario: User should be able to register successfully with a valid email      # src/test/resources/features/Registration.feature:8
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application                                          # stepdefinitions.CommonSteps.user_launches_the_application()
+User is on homepage
+  And User is on homepage                                                      # stepdefinitions.CommonSteps.user_is_on_homepage()
+  When User navigates to registration page                                     # stepdefinitions.RegistrationSteps.user_navigates_to_registration_page()
+  And User enters valid registration details with email "chyranajit@gmail.com" # stepdefinitions.RegistrationSteps.user_enters_valid_registration_details_with_email(java.lang.String)
+  And User clicks on register button                                           # stepdefinitions.RegistrationSteps.user_clicks_on_register_button()
+  Then User should be registered successfully                                  # stepdefinitions.RegistrationSteps.user_should_be_registered_successfully()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:49:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:49:30 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User should not be able to register with invalid email&quot;, &quot;User Registration&quot;](9)" classname="runners.TestRunner" time="51.946">
+    <system-out><![CDATA[
+@regression @Registration
+Scenario: User should not be able to register with invalid email        # src/test/resources/features/Registration.feature:15
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application                                   # stepdefinitions.CommonSteps.user_launches_the_application()
+User is on homepage
+  And User is on homepage                                               # stepdefinitions.CommonSteps.user_is_on_homepage()
+  When User navigates to registration page                              # stepdefinitions.RegistrationSteps.user_navigates_to_registration_page()
+  And User enters registration details with email "chyranajitgmail.com" # stepdefinitions.RegistrationSteps.user_enters_registration_details_with_email(java.lang.String)
+  And User clicks on register button                                    # stepdefinitions.RegistrationSteps.user_clicks_on_register_button()
+  Then Email validation error message should be displayed               # stepdefinitions.RegistrationSteps.email_validation_error_message_should_be_displayed()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:50:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:50:24 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;R-01 Add multiple products to cart&quot;, &quot;Regression Test Suite&quot;](10)" classname="runners.TestRunner" time="35.271">
+    <system-out><![CDATA[
+@regression
+Scenario: R-01 Add multiple products to cart # src/test/resources/features/RegressionTests.feature:3
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application        # stepdefinitions.CommonSteps.user_launches_the_application()
+  When User adds products to cart            # stepdefinitions.CartSteps.user_adds_products_to_cart()
+Products added successfully
+  Then Products should be added successfully # stepdefinitions.CommonSteps.products_should_be_added_successfully()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:51:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:51:17 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;R-02 Update product quantity&quot;, &quot;Regression Test Suite&quot;](11)" classname="runners.TestRunner" time="21.541">
+    <system-out><![CDATA[
+@regression
+Scenario: R-02 Update product quantity # src/test/resources/features/RegressionTests.feature:8
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application  # stepdefinitions.CommonSteps.user_launches_the_application()
+Product quantity updated
+  When User updates product quantity   # stepdefinitions.RegressionSteps.user_updates_product_quantity()
+Verifying updated quantity...
+  Then Quantity should be updated      # stepdefinitions.RegressionSteps.quantity_should_be_updated()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:51:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:51:48 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;R-03 Search invalid item&quot;, &quot;Regression Test Suite&quot;](12)" classname="runners.TestRunner" time="22.757">
+    <system-out><![CDATA[
+@regression
+Scenario: R-03 Search invalid item    # src/test/resources/features/RegressionTests.feature:13
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application # stepdefinitions.CommonSteps.user_launches_the_application()
+Invalid item searched
+  When User searches for invalid item # stepdefinitions.RegressionSteps.user_searches_for_invalid_item()
+No search result displayed
+  Then No result should be displayed  # stepdefinitions.RegressionSteps.no_result_should_be_displayed()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:52:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:52:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;S-01 Verify Home page loads&quot;, &quot;Smoke Tests&quot;](13)" classname="runners.TestRunner" time="20.978">
+    <system-out><![CDATA[
+@smoke
+Scenario: S-01 Verify Home page loads     # src/test/resources/features/SmokeTests.feature:3
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application     # stepdefinitions.CommonSteps.user_launches_the_application()
+Home page loaded successfully
+  Then Home page should load successfully # stepdefinitions.CommonSteps.home_page_should_load_successfully()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:52:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:52:31 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;S-02 Verify navigation links&quot;, &quot;Smoke Tests&quot;](14)" classname="runners.TestRunner" time="21.109">
+    <system-out><![CDATA[
+@smoke
+Scenario: S-02 Verify navigation links        # src/test/resources/features/SmokeTests.feature:7
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application         # stepdefinitions.CommonSteps.user_launches_the_application()
+Catalog, About, Blog clicked
+  When User clicks on Catalog, About and Blog # stepdefinitions.SmokeSteps.user_clicks_on_catalog_about_and_blog()
+Pages navigated correctly
+  Then Pages should navigate correctly        # stepdefinitions.SmokeSteps.pages_should_navigate_correctly()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:52:53 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:52:53 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;S-03 Verify wish list and refer a friend&quot;, &quot;Smoke Tests&quot;](15)" classname="runners.TestRunner" time="22.084">
+    <system-out><![CDATA[
+@smoke
+Scenario: S-03 Verify wish list and refer a friend # src/test/resources/features/SmokeTests.feature:12
+✅ Sauce Labs connected: oauth-chyranajit-4079f
+Application launched
+  Given User launches the application              # stepdefinitions.CommonSteps.user_launches_the_application()
+Wishlist and Refer a Friend clicked
+  When User clicks on Wish list and Refer a Friend # stepdefinitions.SmokeSteps.user_clicks_on_wish_list_and_refer_a_friend()
+Pages opened successfully
+  Then Pages should open successfully              # stepdefinitions.SmokeSteps.pages_should_open_successfully()
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/ranajitchowdhury/.cache/selenium/chromedriver/mac64/147.0.7727.117/chromedriver
+Apr 29, 2026 8:53:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 29, 2026 8:53:15 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.118. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+</testsuite>
