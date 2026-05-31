@@ -162,7 +162,7 @@ mvn clean test -DsuiteXmlFile=testng.xml
 
 👨‍💻 Author
 Ranajit Baran Chowdhury
-QA Automation Engineer
+Software Programmer & QA Automation Engineer
 
 📌 Future Enhancements
 ✅ API Testing integration (Rest Assured)
