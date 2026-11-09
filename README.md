@@ -1,368 +1,243 @@
-# SauceLab Automation Framework — Sauce Labs Cloud Testing
+<div align="center">
 
-![Java](https://img.shields.io/badge/Java-11+-orange?logo=java)
-![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A?logo=selenium)
-![Cucumber](https://img.shields.io/badge/Cucumber-BDD-brightgreen?logo=cucumber)
-![TestNG](https://img.shields.io/badge/TestNG-Runner-red)
-![Maven](https://img.shields.io/badge/Maven-Build-C71A36?logo=apache-maven)
-![SauceLabs](https://img.shields.io/badge/Sauce_Labs-Cloud-E2231A?logo=saucelabs)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+# ☁️ QA Brains Automation — Sauce Labs Cloud
 
-**Author:** Ranajit Baran Chowdhury — Software Programmer & QA Automation Engineer
-**Email:** chyranajit@gmail.com
-**GitHub:** [@ranajitchowdhury](https://github.com/ranajitchowdhury)
+### Selenium + Cucumber suite that runs on local headless Chrome or on the Sauce Labs cloud grid
 
-A robust, production-grade test automation framework built with **Selenium + Java + Cucumber + TestNG**, integrated with **Sauce Labs** for cross-browser cloud execution. This project demonstrates real-world QA automation practices including BDD, Page Object Model, parallel execution, and CI/CD-ready pipeline structure.
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1500&color=FFC107&center=true&vCenter=true&width=900&repeat=true&lines=Java+17+%C2%B7+Selenium+4+%C2%B7+Cucumber+7+%C2%B7+TestNG+%C2%B7+Sauce+Labs;One+suite%2C+two+targets%3A+local+Chrome+or+cloud+browsers;Chrome+%C2%B7+Edge+on+Windows+11+%C2%B7+Firefox+on+macOS)](https://git.io/typing-svg)
+
+<!-- ============ STATUS BAR ============ -->
+[![Tests](https://github.com/rbchy/QaBrainsSauceLabAPI_Automation/actions/workflows/tests.yml/badge.svg)](https://github.com/rbchy/QaBrainsSauceLabAPI_Automation/actions/workflows/tests.yml)
+![Local](https://img.shields.io/badge/Local%20headless-15%20%2F%2015%20passing-22c55e?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Sauce Labs](https://img.shields.io/badge/Sauce%20Labs-Chrome%20%C2%B7%20Edge%20%C2%B7%20Firefox-E2231A?style=for-the-badge&logo=saucelabs&logoColor=white)
+
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-4.25-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Cucumber](https://img.shields.io/badge/Cucumber-7.15-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)
+![TestNG](https://img.shields.io/badge/TestNG-7.9-FF7F00?style=for-the-badge)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+
+![Last Commit](https://img.shields.io/github/last-commit/rbchy/QaBrainsSauceLabAPI_Automation?style=flat-square&color=0d9488&label=Last%20commit)
+![Repo Size](https://img.shields.io/github/repo-size/rbchy/QaBrainsSauceLabAPI_Automation?style=flat-square&color=155e75&label=Repo%20size)
+
+</div>
 
 ---
 
-## 📋 Tech Stack
+## 📌 At a Glance
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Language** | Java 11+ | Core programming language |
-| **Automation** | Selenium WebDriver | Browser UI interaction |
-| **BDD Framework** | Cucumber (Gherkin) | Human-readable test scenarios |
-| **Test Runner** | TestNG | Execution, grouping, parallel runs |
-| **Build Tool** | Maven | Dependency management |
-| **Cloud Platform** | Sauce Labs | Cross-browser cloud execution |
-| **Design Pattern** | Page Object Model | Maintainable UI abstraction |
-| **Reporting** | Cucumber HTML + Sauce Labs Dashboard | Test results and video logs |
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**🙋 What this is**
+
+The **cloud edition** of the QA Brains practice-site suite. The same 15 Cucumber scenarios — authentication, the e-commerce cart and menu navigation — run either on a **local headless Chrome** or on **[Sauce Labs](https://saucelabs.com/)** virtual machines, switched with one flag. On Sauce Labs every scenario becomes a named job with **video, screenshots and logs**, marked passed or failed in the dashboard.
+
+> *Write the test once; choose the browser farm at run time.*
+
+</td>
+<td width="50%" valign="top">
+
+**📍 Quick facts**
+
+| | |
+|---|---|
+| 🧪 **Scenarios** | 15 in 7 feature files |
+| ✅ **CI (local)** | 15 / 15 · headless Chrome |
+| ☁️ **CI (cloud)** | Chrome + Edge on Windows 11, Firefox on macOS |
+| 🔐 **Credentials** | Environment variables / GitHub secrets only |
+| 📸 **On failure** | Screenshot + page HTML; Sauce video |
+
+</td>
+</tr>
+</table>
+
+---
+
+## ✅ Latest Results
+
+| Target | How | Result |
+|---|---|---|
+| 💻 Local headless Chrome | `mvn test -Dheadless=true` | ![passed](https://img.shields.io/badge/-15%20%2F%2015%20passed-22c55e?style=flat-square) |
+| ☁️ Sauce Labs matrix | `mvn test -Dsauce=true` | ![waiting](https://img.shields.io/badge/-waiting%20for%20repository%20secrets-f59e0b?style=flat-square) |
+
+The Sauce Labs matrix is wired into [the workflow](.github/workflows/tests.yml) and starts running for real as soon as the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` repository secrets exist; until then those jobs only print a notice. Earlier cloud runs (29 Apr 2026, *QAbrains Build*, Chrome 147) are in the Sauce Labs dashboard exports in this repository, e.g. [all results](Automated%20_%20Test%20Results%20_%20Sauce%20Labs_all.pdf) and [passed](Automated%20_%20Test%20Results%20_%20Sauce%20Labs_passed.pdf).
+
+---
+
+## ☁️ Running on Sauce Labs
+
+```mermaid
+flowchart LR
+  F["Cucumber scenarios"] --> H{"Hooks<br/>-Dsauce=true<br/>+ SAUCE_* env?"}
+  H -->|no| L["Local Chrome<br/>(headless in CI)"]
+  H -->|yes| D["DriverFactory<br/>RemoteWebDriver"]
+  D --> S["Sauce Labs<br/>us-west-1 grid"]
+  S --> B1["Chrome · Windows 11"]
+  S --> B2["Edge · Windows 11"]
+  S --> B3["Firefox · macOS 13"]
+  S --> V["Dashboard: video,<br/>logs, passed / failed"]
+```
+
+**1. Credentials — environment variables only, never in code:**
+
+```bash
+export SAUCE_USERNAME="your-username"
+export SAUCE_ACCESS_KEY="your-access-key"
+```
+
+**2. Run:**
+
+```bash
+mvn clean test -Dsauce=true                                   # Chrome latest, Windows 11
+mvn clean test -Dsauce=true -Dsauce.browser=firefox -Dsauce.platform="macOS 13"
+mvn clean test -Dsauce=true -Dsauce.build="Release 1.2"       # group jobs under a build name
+```
+
+**3. In GitHub Actions:** add `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` under **Settings → Secrets and variables → Actions**; the three-browser matrix then runs on every push, one Sauce build per workflow run.
+
+---
+
+## 🎯 Test Coverage
+
+<details open>
+<summary><strong>🔐 Authentication</strong></summary>
+
+<br>
+
+| Feature | Scenarios |
+|---|---|
+| Login | Valid credentials · invalid credentials show *"Your email and password both are invalid!"* |
+| Logout | A logged-in user logs out and the login form returns |
+| Registration | Register with a valid e-mail · the browser rejects an e-mail without `@` |
+| Forgot Password | Reset for a registered e-mail · a malformed e-mail is rejected |
+
+</details>
+
+<details>
+<summary><strong>🛒 E-commerce demo &amp; 💨 smoke</strong></summary>
+
+<br>
+
+| Scenario | Check |
+|---|---|
+| Add / remove product | The button toggles between *Add to cart* and *Remove from cart* |
+| R-01 Add multiple products | 3 added → 3 in the cart |
+| R-02 Product details | Details page shows name and price |
+| R-03 Product cards | Every card has a name, a price and an *Add to cart* button |
+| S-01 · S-02 · S-03 | Home page loads; sidebar modules and the E-Commerce site open from the menu |
+
+</details>
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Version |
+|---|---|---|
+| Language | Java | 17 |
+| Browser automation | Selenium WebDriver (`RemoteWebDriver` for the cloud) | 4.25.0 |
+| Cloud grid | Sauce Labs (W3C `sauce:options`) | — |
+| Driver management | WebDriverManager (local Chrome) | 5.7.0 |
+| BDD · runner | Cucumber 7.15 · TestNG 7.9 | — |
+| Build | Maven (Surefire 3.2.5) | — |
+| CI | GitHub Actions: local job + Sauce matrix | — |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-qaBrainsAutomation/
-│
+QaBrainsSauceLabAPI_Automation/
+├── .github/workflows/tests.yml        ← local headless job + Sauce Labs browser matrix
 ├── src/test/java/
-│   ├── stepdefinitions/        ← Cucumber step definition classes
-│   │   ├── LoginSteps.java
-│   │   ├── CartSteps.java
-│   │   ├── RegistrationSteps.java
-│   │   └── CommonSteps.java
-│   ├── pages/                  ← Page Object Model (POM) classes
-│   │   ├── LoginPage.java
-│   │   ├── CartPage.java
-│   │   ├── RegistrationPage.java
-│   │   └── ForgotPasswordPage.java
-│   ├── hooks/                  ← Browser setup & teardown
-│   │   └── Hooks.java
-│   └── runners/                ← TestNG runner configuration
-│       └── TestRunner.java
-│
+│   ├── pages/                         ← Login, Logout, Registration, ForgotPassword, Ecommerce
+│   ├── stepdefinitions/
+│   │   ├── Hooks.java                 ← local or Sauce driver, failure evidence, Sauce job result
+│   │   ├── CommonSteps · AuthSteps · RegistrationSteps · ForgotPasswordSteps
+│   │   └── ShopSteps.java             ← cart, product details, menu navigation
+│   ├── runners/TestRunner.java
+│   └── utils/
+│       ├── BaseTest.java              ← config, local Chrome, headless switch
+│       └── DriverFactory.java         ← Sauce Labs RemoteWebDriver (env-var credentials)
 ├── src/test/resources/
-│   ├── features/               ← Gherkin feature files
-│   │   ├── Login.feature
-│   │   ├── CartCheckout.feature
-│   │   ├── Registration.feature
-│   │   ├── ForgotPassword.feature
-│   │   ├── SmokeTests.feature
-│   │   └── RegressionTests.feature
-│   └── config/                 ← Configuration files
-│       └── config.properties
-│
-├── pom.xml                     ← Maven dependencies & plugins
-├── testng.xml                  ← TestNG suite configuration
-└── README.md
+│   ├── config.properties              ← URL, practice accounts, headless, sauce
+│   └── features/                      ← 7 feature files, 15 scenarios
+├── Automated _ Test Results _ Sauce Labs_*.pdf
+└── pom.xml
 ```
 
 ---
 
-## ✨ Key Features
+## ⚙️ Running Locally
 
-| Feature | Description |
-|---------|-------------|
-| ✅ BDD with Cucumber | Gherkin syntax — plain English test scenarios readable by stakeholders |
-| ✅ Page Object Model | Clean separation of UI locators and test logic per page |
-| ✅ Sauce Labs Cloud | Execute on 700+ browser/OS combinations without local setup |
-| ✅ Parallel Execution | Multi-threaded test runs via TestNG for faster feedback |
-| ✅ Cross-Browser | Chrome, Firefox, Edge, Safari via Sauce Labs grid |
-| ✅ Screenshot on Failure | Auto-captured failure screenshots in Sauce Labs dashboard |
-| ✅ Video Recording | Every test run recorded and stored in Sauce Labs |
-| ✅ CI/CD Ready | Plug directly into Jenkins or GitHub Actions |
+**Prerequisites:** JDK 17+ · Maven 3.8+ · Google Chrome
 
----
-
-## 🎯 Test Coverage
-
-### 🔐 Authentication
-- Valid and invalid login validation
-- Session management and logout verification
-- Error message display for incorrect credentials
-
-### 🛒 Cart & Checkout
-- Add product to cart
-- Remove product from cart
-- Quantity update verification
-- Full checkout flow validation
-
-### 📝 Registration
-- Successful registration with valid data
-- Email format validation
-- Duplicate registration handling
-
-### 🔑 Forgot Password
-- Reset link request with registered email
-- Error handling for unregistered email
-
-### 🚀 Smoke & Regression
-- Critical path verification (Smoke)
-- Full application regression suite
-
----
-
-## ✅ Prerequisites
-
-Ensure the following are installed before setup:
-
-- ✅ **JDK 11 or higher** — configured in system PATH
-- ✅ **Maven** — latest stable version
-- ✅ **IDE** — Eclipse or IntelliJ IDEA
-- ✅ **Sauce Labs Account** — with Username and Access Key
-- ✅ **Git** — for cloning the repository
-
----
-
-## ☁️ Sauce Labs Setup
-
-**Step 1 — Create a Sauce Labs account:**
-Visit [saucelabs.com](https://saucelabs.com) and sign up for a free trial.
-
-**Step 2 — Get your credentials:**
-Go to **Account → User Settings** and copy your:
-- `SAUCE_USERNAME`
-- `SAUCE_ACCESS_KEY`
-
-**Step 3 — Configure in your framework:**
-
-```java
-String USERNAME    = System.getenv("SAUCE_USERNAME");
-String ACCESS_KEY  = System.getenv("SAUCE_ACCESS_KEY");
-String SAUCE_URL   = "https://" + USERNAME + ":" + ACCESS_KEY
-                   + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
-```
-
-> **Best Practice:** Store credentials as environment variables, never hardcode them.
-
-**Step 4 — Set environment variables (Mac/Linux):**
 ```bash
-export SAUCE_USERNAME="your_username"
-export SAUCE_ACCESS_KEY="your_access_key"
-```
-
----
-
-## ⚙️ Installation & Setup
-
-**1. Clone the repository:**
-```bash
-git clone https://github.com/ranajitchowdhury/QaBrainsSauceLabAPI_Automation.git
+git clone https://github.com/rbchy/QaBrainsSauceLabAPI_Automation.git
 cd QaBrainsSauceLabAPI_Automation
+
+mvn clean test                                    # local Chrome
+mvn clean test -Dheadless=true                    # what the CI local job runs
+mvn clean test -Dcucumber.filter.tags="@Cart"     # one area
 ```
 
-**2. Install dependencies:**
-```bash
-mvn clean install -DskipTests
-```
+Reports: `target/cucumber-reports.html` · `target/cucumber-reports/` (JSON, JUnit XML) · `target/failures/` (page HTML of failed scenarios).
 
 ---
 
-## ▶️ Running Tests
+## 🧹 Maintenance Log
 
-### Run all tests
-```bash
-mvn clean test
-```
-
-### Run with specific TestNG suite
-```bash
-mvn test -DsuiteXmlFile=testng.xml
-```
-
-### Run by Cucumber tag
-```bash
-# Smoke tests only
-mvn test -Dcucumber.filter.tags="@smoke"
-
-# Regression tests only
-mvn test -Dcucumber.filter.tags="@regression"
-
-# Login tests only
-mvn test -Dcucumber.filter.tags="@Login"
-```
-
-### Run in parallel
-```bash
-mvn test -DsuiteXmlFile=testng-parallel.xml
-```
+| Change | Why |
+|---|---|
+| **Removed the hard-coded Sauce Labs username and access key** from `DriverFactory`; credentials now come only from environment variables / GitHub secrets | The key was readable by anyone in a public repository. It remains in git history, so it **must be regenerated in Sauce Labs** (User Settings → Access Key) |
+| Added step definitions, hooks and the Login / Logout / ForgotPassword / Ecommerce pages | None were in the repository — the suite could not run |
+| Cart, smoke and regression scenarios rewritten for the site's real e-commerce demo and menu | The old ones (catalog, blog, wishlist, search) belong to another shop |
+| Sauce jobs are marked passed / failed in the dashboard | Sauce shows every job as *Complete* unless told the result |
+| Unused `SearchPage` and `DriverHelper` (Windows-only driver path) removed | Dead code |
+| GitHub Actions: local job + Sauce matrix | Every push is checked; the cloud runs start once secrets are added |
 
 ---
 
-## 📊 Reports & Dashboards
+## 📈 Roadmap
 
-| Report Type | Location |
-|-------------|---------|
-| **Cucumber HTML** | `target/cucumber-reports/cucumber.html` |
-| **TestNG Report** | `target/surefire-reports/index.html` |
-| **Sauce Labs Dashboard** | [app.saucelabs.com](https://app.saucelabs.com) — video, logs, screenshots |
-
-Open Cucumber report after test run:
-```bash
-open target/cucumber-reports/cucumber.html
-```
+- [x] Credentials out of code; local and cloud modes
+- [x] GitHub Actions with a Sauce Labs browser matrix
+- [ ] Add the Sauce Labs secrets and record the first matrix run
+- [ ] Parallel scenarios on Sauce Labs (`ThreadLocal` driver + TestNG data provider)
+- [ ] Mobile web on Sauce Labs virtual Android / iOS devices
 
 ---
 
-## 🔧 Common Issues & Fixes
+## 🔗 Related Projects
 
-### ❌ `NoSuchElementException`
-```
-✔ Use explicit WebDriverWait instead of Thread.sleep
-✔ Verify XPath/CSS selector in browser DevTools
-✔ Check if element is inside an iframe
-```
+| Project | Stack |
+|---|---|
+| 🧪 [QA Brains — Java + Selenium](https://github.com/rbchy/QaBrainsAutomationJavaSelenium) | Same scenarios, local only — CI green |
+| 🎭 [QA Brains — Java + Playwright](https://github.com/rbchy/QaBrainsAutomationJavaPlaywright) | Same scenarios on Playwright — CI green |
+| 📱 [Appium Android Automation](https://github.com/rbchy/AppiumTest_Andriod_Automation) | Appium 3 on an Android emulator in CI, optional Sauce Labs |
+| ⭐ [RbcTcsWorld E-Commerce Suite](https://github.com/rbchy/RbcTcsWorld_ECommerceSuite) | Spring Boot · Selenium · Playwright · CI quality gates |
 
-### ❌ `DuplicateStepDefinition`
-```
-✔ Ensure each Gherkin step is defined in only one class
-✔ Separate step definition classes by feature domain
-✔ Check glue path in TestRunner — avoid duplicate packages
-```
-
-### ❌ `Driver NullPointerException`
-```
-✔ Initialize WebDriver in @Before hook, not in constructor
-✔ Use ThreadLocal<WebDriver> for parallel execution safety
-✔ Verify Hooks.java is included in the glue path
-```
-
-### ❌ `Element not found in Sauce Labs`
-```
-✔ Add explicit waits for dynamic elements
-✔ Check for async DOM updates (AJAX)
-✔ Increase implicit wait timeout in config
-✔ Review Sauce Labs video recording for visual diagnosis
-```
-
----
-
-## 🔄 CI/CD Integration
-
-### Jenkins Pipeline
-```groovy
-pipeline {
-    agent any
-    stages {
-        stage('Test') {
-            steps {
-                sh 'mvn clean test -DsuiteXmlFile=testng.xml'
-            }
-        }
-    }
-    post {
-        always {
-            cucumber buildStatus: 'UNSTABLE',
-                     reportTitle: 'QA Brains Report',
-                     fileIncludePattern: '**/cucumber.json'
-        }
-    }
-}
-```
-
-### GitHub Actions
-```yaml
-name: QA Automation
-
-on: [push, pull_request]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-      - name: Run Tests
-        env:
-          SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
-        run: mvn clean test
-```
-
----
-
-## 🏗️ Framework Architecture
-
-```
-Feature Files (Gherkin)
-        ↓
-Step Definitions (stepdefinitions/)
-        ↓
-Page Object Model (pages/)
-        ↓
-Selenium WebDriver
-        ↓
-Sauce Labs Cloud Grid
-        ↓
-Chrome / Firefox / Edge / Safari
-
-```
-
----
-
-## 🌟 Why This Project Stands Out
-
-| Highlight | Detail |
-|-----------|--------|
-| ☁️ Cloud Testing | 700+ browser/OS combos via Sauce Labs |
-| 🎥 Video Replay | Every test run recorded for defect analysis |
-| ♟️ BDD | Plain English scenarios aligned with business requirements |
-| 🔁 Parallel Execution | Faster feedback with TestNG parallel configuration |
-| 🔒 Secure Credentials | Environment variable-based auth, no hardcoded secrets |
-| 📦 CI/CD Ready | Jenkins + GitHub Actions examples included |
-| 🧩 Scalable Design | POM makes adding new pages and scenarios effortless |
-
----
-
-## 📈 Future Enhancements
-
-- [ ] REST API Testing — REST Assured integration
-- [ ] Docker support — containerized test execution
-- [ ] Allure Reports — richer test reporting with trends
-- [ ] Parallel execution optimization — TestNG data providers
-- [ ] Database validation — JDBC-based backend assertions
-- [ ] Performance testing — JMeter integration
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your branch: `git checkout -b feature/improvement`
-3. Commit your changes: `git commit -m 'Add improvement'`
-4. Push: `git push origin feature/improvement`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is open-source under the **MIT License**.
+<sub>All projects: [github.com/rbchy](https://github.com/rbchy)</sub>
 
 ---
 
 ## 👤 Author
 
-**Ranajit Baran Chowdhury**
-Software Programmer & QA Automation Engineer
-- 📧 Email: chyranajit@gmail.com
-- 🐙 GitHub: [@ranajitchowdhury](https://github.com/ranajitchowdhury)
+<div align="center">
 
----
+**Ranajit Baran Chowdhury (RB Chowdhury)**
+QA Automation Engineer / SDET · West Norriton, Pennsylvania, USA
 
-**Version:** 1.0.0
-**Last Updated:** May 2026
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rbchy/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rbchy)
+[![Website](https://img.shields.io/badge/Website-rbchy.github.io%2Frbchy-0d9488?style=for-the-badge&logo=githubpages&logoColor=white)](https://rbchy.github.io/rbchy/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Website-blueviolet?style=for-the-badge&logo=wix&logoColor=white)](https://rbc6543.wixsite.com/rbc-portfolio)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:chyranajit@gmail.com)
+
+<sub>Licensed under MIT. Never commit Sauce Labs credentials — use environment variables or repository secrets.</sub>
+
+⭐ *If this framework helps you, a star on the repo is appreciated.*
+
+</div>
