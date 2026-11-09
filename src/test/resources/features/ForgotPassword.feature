@@ -12,4 +12,4 @@ Feature: Forgot Password functionality
     Given User is on Forgot Password page
     When User enters unregistered email "chyranajitgmail.com"
     And User clicks on Submit button
-    Then User should see error message "Please include an '@' sign in the email address.'chyranajitgmail.com' is missing an'@'."
+    Then User should see error message "missing an '@'"

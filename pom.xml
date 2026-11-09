@@ -19,6 +19,10 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- -Dheadless=true: Chrome without a window. -Dsauce=true: run on Sauce Labs
+             (credentials from SAUCE_USERNAME / SAUCE_ACCESS_KEY environment variables) -->
+        <headless>false</headless>
+        <sauce>false</sauce>
     </properties>
 
     <dependencies>
@@ -87,6 +91,10 @@
                     <includes>
                         <include>**/*Runner.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <headless>${headless}</headless>
+                        <sauce>${sauce}</sauce>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>

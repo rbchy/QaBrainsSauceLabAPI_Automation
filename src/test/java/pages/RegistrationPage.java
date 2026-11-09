@@ -14,8 +14,6 @@ public class RegistrationPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    private By registerLink = By.xpath("//*[@id='registration']/span");
-
     private By nameField = By.id("name");
     private By countryDropdown = By.id("country");
     private By accountTypeDropdown = By.id("account");
@@ -39,15 +37,13 @@ public class RegistrationPage {
         }
     }
 
+    /** The menu ids are generated per page load (rc-menu-uuid-...), so open the page by URL. */
     public void openRegistrationPage() {
-        if (driver.getCurrentUrl().contains("registration")) {
-            return;
+        if (!driver.getCurrentUrl().contains("/registration")) {
+            String home = driver.getCurrentUrl().replaceAll("^(https?://[^/]+).*$", "$1");
+            driver.get(home + "/registration");
         }
-
-        WebElement link = wait.until(ExpectedConditions.elementToBeClickable(registerLink));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", link);
-        safeClick(link);
-        wait.until(ExpectedConditions.urlContains("registration"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(nameField));
     }
 
     public void enterRegistrationDetails(String fullName, String country, String accountType,

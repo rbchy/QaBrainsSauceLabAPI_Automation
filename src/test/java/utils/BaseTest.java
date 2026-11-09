@@ -44,7 +44,15 @@ public class BaseTest {
             options.addArguments("--disable-extensions");
             options.addArguments("--disable-notifications");
             options.addArguments("--incognito"); // Cache clear
-            
+
+            // ✅ Headless for CI: mvn test -Dheadless=true (or headless=true in config.properties)
+            boolean headless = Boolean.parseBoolean(
+                    System.getProperty("headless", config.getProperty("headless", "false")));
+            if (headless) {
+                options.addArguments("--headless=new", "--window-size=1920,1080",
+                        "--no-sandbox", "--disable-dev-shm-usage");
+            }
+
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -66,6 +74,16 @@ public class BaseTest {
 
     public static WebDriver getDriver() {
         return initDriver();
+    }
+
+    /** Use a driver created elsewhere (e.g. a Sauce Labs RemoteWebDriver from DriverFactory). */
+    public static void useDriver(WebDriver remote) {
+        driver = remote;
+    }
+
+    /** The open driver, or null — never starts a new browser. */
+    public static WebDriver currentDriver() {
+        return driver;
     }
 
     public static void quitDriver() {
